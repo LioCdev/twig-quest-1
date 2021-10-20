@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonjour</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+  
+</head>
+
+<body>
+    
+        {% for products in product %}
+        {% if loop.index0 == 3 %}
+        <br>
+        {% endif %}
+        {{products}}
+        {% endfor %}
+    
+
+    {# <table>
+        
+        <tr>
+            {% for i in [products] | slice(0, 2) %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+                
+        <tr>
+            {% for i in [products] | slice(3,5) %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+
+    </table> #}
+
+    {{dump(product)}}
+</body>
+</html>
